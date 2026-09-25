@@ -8,9 +8,8 @@ import { SiteFooter } from "@/components/site-footer";
 import { SydneyOffice } from "@/components/sydney-office";
 
 /*
- * Section order matches the Framer page exactly — including the Sydney Office
- * block sitting *after* the footer. Move <SydneyOffice /> above <SiteFooter />
- * if that wasn't intentional.
+ * Section order follows the Framer page, except the footer now sits last — the
+ * Framer file had the Sydney Office block after it.
  */
 export default function Home() {
   return (
@@ -21,9 +20,9 @@ export default function Home() {
         <Approach />
         <Principal />
         <Enquiry />
+        <SydneyOffice />
       </main>
       <SiteFooter />
-      <SydneyOffice />
       <MobileCtaBar />
     </div>
   );
