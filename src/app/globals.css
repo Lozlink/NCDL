@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens lifted 1:1 from the Framer project (wild-music-900862.framer.app).
+ * Framer only has two breakpoints: a 390px "phone" variant (fluid below 1200px)
+ * and a 1200px "desktop" variant (fluid, sections capped at 1440px).
+ * Base styles here are the phone variant; `desk:` is the desktop variant.
+ */
+@theme {
+  --breakpoint-desk: 1200px;
+
+  --color-ink: #11110f;
+  --color-bone: #f4f1eb;
+  --color-stone: #b4ada2;
+  --color-rule: #d8d3ca;
+  --color-night: #0a0a09;
+  --color-focus: #0099ff;
+
+  --font-serif: var(--font-bodoni), "Bodoni Moda", serif;
+  --font-sans: var(--font-bespoke), "Bespoke Sans", sans-serif;
+
+  --ease-framer: cubic-bezier(0.2, 0, 0, 1);
+}
+
+/*
+ * Framer's `--token-757a…` (grid rules / mobile CTA divider) has a dark-scheme
+ * value. It's almost certainly unintentional, but it is what the live site does,
+ * so it's reproduced here. Delete this block to keep the light rule colour always.
+ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-rule: #3a3935;
+  }
+}
+
+:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-ink);
+}
+
+/* ---- Text presets (Framer text styles) ---------------------------------- */
+
+/* framer-styles-preset-i5d85 — eyebrow / index numbers */
+@utility type-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2em;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--color-stone);
+}
+
+/* framer-styles-preset-1a7brbd — hero H1 */
+@utility type-display {
+  font-family: var(--font-serif);
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1.02em;
+  letter-spacing: -1.5px;
+  color: var(--color-bone);
+}
+
+/* framer-styles-preset-vf5u3s — section H2 (light sections) */
+@utility type-h2 {
+  font-family: var(--font-serif);
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.08em;
+  letter-spacing: -0.8px;
+  color: var(--color-ink);
+}
+
+/* Inline-styled 48px H2 used on the two dark sections */
+@utility type-h2-dark {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.08em;
+  letter-spacing: -1px;
+  color: var(--color-bone);
+}
+
+/* framer-styles-preset-1u98g1i — long-form body copy */
+@utility type-body {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.55em;
+  letter-spacing: -0.02em;
+}
+
+/* Button / CTA label — 12px bold uppercase. Tracking varies per instance. */
+@utility type-label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  white-space: pre;
+}
