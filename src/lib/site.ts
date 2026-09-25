@@ -15,9 +15,9 @@ export const site = {
   phoneDisplay: "0481 251 455",
   phoneHref: "tel:+61481251455",
   email: "info@ncdl.com.au",
-  address: "Level 13, 111 Elizabeth Street, Sydney NSW 2000",
+  address: "Level 13, 133 Elizabeth Street, Sydney NSW 2000",
   mapsHref:
-    "https://www.google.com/maps/search/?api=1&query=Level+13%2C+111+Elizabeth+Street%2C+Sydney+NSW+2000",
+    "https://www.google.com/maps/search/?api=1&query=Level+13%2C+133+Elizabeth+Street%2C+Sydney+NSW+2000",
 } as const;
 
 export const anchors = {
